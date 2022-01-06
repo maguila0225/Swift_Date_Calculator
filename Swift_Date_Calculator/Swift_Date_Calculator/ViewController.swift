@@ -7,6 +7,7 @@
 
 import UIKit
 
+var userDatabase: [String:String] = [:]
 class ViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var username: UITextField!
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
             email.textColor = .black
         }
     }
-    
+
     @IBAction func usernameEdit(_ sender: Any) {
         if username.text == "Name"{
             username.text = nil;
