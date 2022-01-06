@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="prt-xT-Zfa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="At8-Gi-pr9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -12,7 +12,7 @@
         <!--Log In Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Log In Page" id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Date_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="screen1" title="Log In Page" id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Date_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,24 +310,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQL-6I-V4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2451" y="437"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="RVQ-H3-157">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jAp-xy-Zpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="prt-xT-Zfa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g8L-cb-OrY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="At8-Gi-pr9" kind="relationship" relationship="rootViewController" id="dBp-zE-M0T"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-226.08695652173915" y="81.696428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rUp-YS-fFw">
