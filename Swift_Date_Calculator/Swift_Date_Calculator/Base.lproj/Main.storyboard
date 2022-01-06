@@ -63,6 +63,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log In" titleAlignment="center">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logInAttempt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Txc-4k-dvF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-H6-olT">
                                 <rect key="frame" x="20" y="808" width="374" height="50"/>
@@ -77,10 +80,20 @@
                                     <segue destination="FuU-t9-kwT" kind="show" id="iog-ks-SPQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpc-Az-7eo">
+                                <rect key="frame" x="20" y="478" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="du3-0E-Bjg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
+                            <constraint firstItem="Xpc-Az-7eo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5Pd-RL-n3q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEJ-P5-i4P" secondAttribute="trailing" constant="20" id="71X-Ws-KLX"/>
                             <constraint firstItem="3Ea-Jn-oSj" firstAttribute="top" secondItem="wEJ-P5-i4P" secondAttribute="bottom" constant="30" id="7qJ-9E-yxg"/>
                             <constraint firstItem="qRJ-H6-olT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8qb-b9-jg2"/>
@@ -89,6 +102,8 @@
                             <constraint firstItem="wEJ-P5-i4P" firstAttribute="top" secondItem="A1z-lI-6uK" secondAttribute="bottom" constant="15" id="IRr-sR-LT9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qRJ-H6-olT" secondAttribute="trailing" constant="20" id="RAn-ce-2aK"/>
                             <constraint firstItem="3Ea-Jn-oSj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RRw-sb-ta2"/>
+                            <constraint firstItem="wj0-GY-bSO" firstAttribute="top" secondItem="Xpc-Az-7eo" secondAttribute="bottom" constant="30" id="SYL-ha-ho7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpc-Az-7eo" secondAttribute="trailing" constant="20" id="aYf-ut-qRG"/>
                             <constraint firstItem="wj0-GY-bSO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d1O-wx-mtV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A1z-lI-6uK" secondAttribute="trailing" constant="20" id="epm-9S-lQJ"/>
                             <constraint firstItem="qRJ-H6-olT" firstAttribute="top" secondItem="3Ea-Jn-oSj" secondAttribute="bottom" constant="10" id="erh-K9-VIw"/>
@@ -103,6 +118,7 @@
                         <outlet property="createNewAccount" destination="qRJ-H6-olT" id="a4m-Cz-CAl"/>
                         <outlet property="email" destination="wj0-GY-bSO" id="06G-71-keS"/>
                         <outlet property="logIn" destination="3Ea-Jn-oSj" id="Y6u-qw-lYE"/>
+                        <outlet property="logInWarning" destination="Xpc-Az-7eo" id="r0T-YZ-lbe"/>
                         <outlet property="password" destination="wEJ-P5-i4P" id="QRj-8F-hM4"/>
                         <outlet property="username" destination="A1z-lI-6uK" id="eQu-h8-SNS"/>
                     </connections>
@@ -110,6 +126,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1592.753623188406" y="81.696428571428569"/>
+        </scene>
+        <!--Main Screen-->
+        <scene sceneID="4EF-fc-Scp">
+            <objects>
+                <viewController storyboardIdentifier="screen2" id="Ku6-eP-Zvw" customClass="MainScreen" customModule="Swift_Date_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4F5-W0-coi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sod-PH-TkZ">
+                                <rect key="frame" x="20" y="244" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="H1M-LG-GxE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkN-If-CW4">
+                                <rect key="frame" x="20" y="359" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="wbd-6t-Irx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F6J-IT-qHQ"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="QkN-If-CW4" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="4Tz-aQ-jDE"/>
+                            <constraint firstItem="Sod-PH-TkZ" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="DpY-wI-0Lk"/>
+                            <constraint firstItem="Sod-PH-TkZ" firstAttribute="top" secondItem="F6J-IT-qHQ" secondAttribute="top" constant="200" id="KaZ-Bn-nXr"/>
+                            <constraint firstItem="QkN-If-CW4" firstAttribute="top" secondItem="Sod-PH-TkZ" secondAttribute="bottom" constant="15" id="Pa5-M8-yyy"/>
+                            <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="QkN-If-CW4" secondAttribute="trailing" constant="20" id="Td4-gi-2BR"/>
+                            <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="Sod-PH-TkZ" secondAttribute="trailing" constant="20" id="hd9-qv-qYX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cTR-FY-Ckz"/>
+                    <connections>
+                        <outlet property="nameField" destination="QkN-If-CW4" id="fcV-oV-gKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZo-8C-J1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2451" y="-375"/>
         </scene>
         <!--Register Screen-->
         <scene sceneID="x1K-yM-M5u">
@@ -246,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQL-6I-V4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442.0289855072465" y="81.696428571428569"/>
+            <point key="canvasLocation" x="2451" y="437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RVQ-H3-157">
@@ -301,6 +364,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

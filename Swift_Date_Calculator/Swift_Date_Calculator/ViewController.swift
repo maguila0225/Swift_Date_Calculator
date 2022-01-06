@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logIn: UIButton!
     @IBOutlet weak var createNewAccount: UIButton!
     
+    @IBOutlet weak var logInWarning: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +39,26 @@ class ViewController: UIViewController {
             password.textColor = .black
             password.isSecureTextEntry = true
         }
+    }
+    
+   
+    @IBAction func logInAttempt(_ sender: Any) {
+        if  email.text!.isEmpty == false &&
+            password.text == userDatabase[email.text!]{
+        let controller = storyboard?.instantiateViewController(withIdentifier: "screen2") as! MainScreen
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
+        
+//            let dataMainScreen = ViewController.description() as! MainScreen
+//
+//            dataMainScreen.dataUsername = username.text!
+        
+        }
+        else{
+            logInWarning.textColor = .red
+            logInWarning.text = "Invalid Username/Password!"
+        }
+        
     }
     
     
