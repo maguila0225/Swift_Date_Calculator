@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        userDatabase["admin"] = "admin"
     }
     
     @IBAction func emailEdit(_ sender: Any) {

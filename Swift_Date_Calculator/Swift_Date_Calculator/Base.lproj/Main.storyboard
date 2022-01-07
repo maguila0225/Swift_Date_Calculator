@@ -137,21 +137,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sod-PH-TkZ">
-                                <rect key="frame" x="20" y="288" width="374" height="100"/>
+                                <rect key="frame" x="20" y="108" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="H1M-LG-GxE"/>
+                                    <constraint firstAttribute="height" constant="50" id="H1M-LG-GxE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkN-If-CW4">
-                                <rect key="frame" x="20" y="403" width="374" height="100"/>
+                                <rect key="frame" x="20" y="163" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="wbd-6t-Irx"/>
+                                    <constraint firstAttribute="height" constant="50" id="wbd-6t-Irx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-f3-6Bq">
+                                <rect key="frame" x="20" y="313" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k1w-Cy-Egw">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpj-pN-w5D">
+                                        <rect key="frame" x="127.5" y="0.0" width="119" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-9W-cUB">
+                                        <rect key="frame" x="254.5" y="0.0" width="119.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nKP-Hl-WBc"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter date: YYYY/MM/DD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-Jd-g27">
+                                <rect key="frame" x="20" y="253" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AE0-ax-6qN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdV-SX-fng">
+                                <rect key="frame" x="20" y="393" width="374" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0pA-gq-V8k"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Day">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getTheDay:" destination="Ku6-eP-Zvw" eventType="touchUpInside" id="ODK-Qw-inR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of The Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWK-ya-FHY">
+                                <rect key="frame" x="20" y="473" width="374" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0GL-4H-i2Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -160,15 +216,32 @@
                         <constraints>
                             <constraint firstItem="QkN-If-CW4" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="4Tz-aQ-jDE"/>
                             <constraint firstItem="Sod-PH-TkZ" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="DpY-wI-0Lk"/>
-                            <constraint firstItem="Sod-PH-TkZ" firstAttribute="top" secondItem="F6J-IT-qHQ" secondAttribute="top" constant="200" id="KaZ-Bn-nXr"/>
-                            <constraint firstItem="QkN-If-CW4" firstAttribute="top" secondItem="Sod-PH-TkZ" secondAttribute="bottom" constant="15" id="Pa5-M8-yyy"/>
+                            <constraint firstItem="fyA-f3-6Bq" firstAttribute="top" secondItem="wRv-Jd-g27" secondAttribute="bottom" constant="30" id="ENg-oI-b2h"/>
+                            <constraint firstItem="fyA-f3-6Bq" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="Htd-PN-yz1"/>
+                            <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="SWK-ya-FHY" secondAttribute="trailing" constant="20" id="KY7-1a-tuJ"/>
+                            <constraint firstItem="Sod-PH-TkZ" firstAttribute="top" secondItem="F6J-IT-qHQ" secondAttribute="top" constant="20" id="KaZ-Bn-nXr"/>
+                            <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="JdV-SX-fng" secondAttribute="trailing" constant="20" id="L52-Yj-eoK"/>
+                            <constraint firstItem="JdV-SX-fng" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="O3X-gV-LAE"/>
+                            <constraint firstItem="JdV-SX-fng" firstAttribute="top" secondItem="fyA-f3-6Bq" secondAttribute="bottom" constant="30" id="PN2-EJ-kgQ"/>
+                            <constraint firstItem="QkN-If-CW4" firstAttribute="top" secondItem="Sod-PH-TkZ" secondAttribute="bottom" constant="5" id="Pa5-M8-yyy"/>
                             <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="QkN-If-CW4" secondAttribute="trailing" constant="20" id="Td4-gi-2BR"/>
+                            <constraint firstItem="SWK-ya-FHY" firstAttribute="top" secondItem="JdV-SX-fng" secondAttribute="bottom" constant="30" id="UaA-5H-pq4"/>
+                            <constraint firstItem="SWK-ya-FHY" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="cbD-yz-C7W"/>
+                            <constraint firstItem="wRv-Jd-g27" firstAttribute="top" secondItem="QkN-If-CW4" secondAttribute="bottom" constant="40" id="fS7-pd-k4g"/>
                             <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="Sod-PH-TkZ" secondAttribute="trailing" constant="20" id="hd9-qv-qYX"/>
+                            <constraint firstItem="wRv-Jd-g27" firstAttribute="leading" secondItem="F6J-IT-qHQ" secondAttribute="leading" constant="20" id="hyV-Qp-qPe"/>
+                            <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="wRv-Jd-g27" secondAttribute="trailing" constant="20" id="s8z-d3-H3S"/>
+                            <constraint firstItem="F6J-IT-qHQ" firstAttribute="trailing" secondItem="fyA-f3-6Bq" secondAttribute="trailing" constant="20" id="u4j-Fo-dbD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cTR-FY-Ckz"/>
                     <connections>
+                        <outlet property="dayDate" destination="ovi-9W-cUB" id="LfD-Qn-tp5"/>
+                        <outlet property="dayOfTheWeek" destination="SWK-ya-FHY" id="IrK-Hk-7GW"/>
+                        <outlet property="getDay" destination="JdV-SX-fng" id="dPH-4N-9Hs"/>
+                        <outlet property="monthDate" destination="lpj-pN-w5D" id="tHg-eg-ZyD"/>
                         <outlet property="nameField" destination="QkN-If-CW4" id="fcV-oV-gKY"/>
+                        <outlet property="yearDate" destination="k1w-Cy-Egw" id="Mtq-3j-HG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZo-8C-J1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
