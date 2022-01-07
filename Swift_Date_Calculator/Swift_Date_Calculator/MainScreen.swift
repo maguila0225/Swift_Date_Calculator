@@ -8,24 +8,11 @@
 import UIKit
 
 class MainScreen: UIViewController {
-
+    var data: String?
     @IBOutlet weak var nameField: UILabel!
-    var observer: NSObjectProtocol?
-//    var notification: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        observer = NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: nKey), object: nil, queue: .main, using: { notification in
-            
-        })
-        
-//        guard let object = notification.object as String?
-//        else{
-//            return
-//        }
-//
-//        guard case nameField.text = object
-//        else{
-//            return
-//        }
+        nameField.text = data
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 var userDatabase: [String:String] = [:]
-let nKey = "payload"
+var inputUsername: String = ""
 
 class ViewController: UIViewController {
     
@@ -47,21 +47,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logInAttempt(_ sender: Any) {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: nKey), object: username.text)
-        if  email.text!.isEmpty == false &&
+        if email.text?.isEmpty == false &&
+            username.text?.isEmpty == false &&
             password.text == userDatabase[email.text!]{
-            let vc = storyboard?.instantiateViewController(withIdentifier: "screen2") as! MainScreen
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
+            logInWarning.text = ""
+            performSegue(withIdentifier: "showScreen2", sender: nil)
         }
         else{
             logInWarning.textColor = .red
-            logInWarning.text = "Invalid Username/Password!"
+            logInWarning.text = "Log In Failed"
         }
-        
     }
-    
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showScreen2"{
+            let secondScreen = segue.destination as! MainScreen
+            secondScreen.data = username.text
+        }
+    }
 }
 
