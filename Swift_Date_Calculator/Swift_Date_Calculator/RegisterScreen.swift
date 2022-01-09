@@ -14,29 +14,12 @@ class RegisterScreen: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var registerStatus: UILabel!
     
+    var okRegister: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    @IBAction func enterRegisterEmail(_ sender: Any) {
-        if emailRegister.text == "email"{
-            emailRegister.text = nil;
-            emailRegister.textColor = .black
-        }
-    }
-    @IBAction func enterRegisterPassword(_ sender: Any) {
-        if passwordRegister.text == "Password"{
-            passwordRegister.text = nil;
-            passwordRegister.textColor = .black
-            passwordRegister.isSecureTextEntry = true
-        }
-    }
-    @IBAction func enterConfirmPassword(_ sender: Any) {
-        if confirmPassword.text == "Password"{
-            confirmPassword.text = nil;
-            confirmPassword.textColor = .black
-            confirmPassword.isSecureTextEntry = true
-        }
+        passwordRegister.isSecureTextEntry = true
+        confirmPassword.isSecureTextEntry = true
     }
     
     @IBAction func registerUser(_ sender: Any) {
@@ -45,13 +28,27 @@ class RegisterScreen: UIViewController {
             passwordRegister.text!.isEmpty == false &&
                 passwordRegister.text == confirmPassword.text {
                 userDatabase[emailRegister.text!] = passwordRegister.text!
-                registerStatus.textColor = .cyan
-                registerStatus.text = "Successful Registration"
+                okRegister = true
                 NSLog("\n Username: \(emailRegister.text!) \n Password; \(userDatabase[emailRegister.text!]!)")
+            performSegue(withIdentifier: "returnToLogIn", sender: nil)
             }
             else{
                 registerStatus.textColor = .red
                 registerStatus.text = "Registration Failed"
             }
     }
+    
+    @IBAction func backButtonToLogIn(_ sender: Any) {
+        performSegue(withIdentifier: "returnToLogIn", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "returnToLogIn"{
+            let logInScreen = segue.destination as! ViewController
+            logInScreen.registrationOK = okRegister
+        }
+    }
 }
+
+
+
+

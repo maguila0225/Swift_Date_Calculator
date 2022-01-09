@@ -10,7 +10,9 @@ import UIKit
 var userDatabase: [String:String] = [:]
 var inputUsername: String = ""
 
+
 class ViewController: UIViewController {
+    var registrationOK: Bool = false
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var username: UITextField!
@@ -22,28 +24,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userDatabase["admin"] = "admin"
+        password.isSecureTextEntry = true
+        logInWarning.textColor = .cyan
     }
     
-    @IBAction func emailEdit(_ sender: Any) {
-        if email.text == "email"{
-            email.text = nil;
-            email.textColor = .black
+    override func viewWillAppear(_ animated: Bool) {
+        email.text = ""
+        username.text = ""
+        password.text = ""
+        if registrationOK == true {
+        logInWarning.text = "Successful Registration"
         }
     }
     
-    @IBAction func usernameEdit(_ sender: Any) {
-        if username.text == "Name"{
-            username.text = nil;
-            username.textColor = .black
-        }
-    }
-    
-    @IBAction func passwordEdit(_ sender: Any) {
-        if password.text == "Password"{
-            password.text = nil
-            password.textColor = .black
-            password.isSecureTextEntry = true
-        }
+    override func viewDidDisappear(_ animated: Bool) {
+        logInWarning.text = ""
     }
     
     @IBAction func logInAttempt(_ sender: Any) {
