@@ -97,6 +97,6 @@ class MainScreen: UIViewController {
     }
     
     @IBAction func logOut(_ sender: Any) {
-        performSegue(withIdentifier: "returnToLogInFromMain", sender: nil)
+        self.dismiss(animated: true)
     }
 }

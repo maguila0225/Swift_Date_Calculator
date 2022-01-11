@@ -39,7 +39,7 @@ class RegisterScreen: UIViewController {
     }
     
     @IBAction func backButtonToLogIn(_ sender: Any) {
-        performSegue(withIdentifier: "returnToLogIn", sender: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "returnToLogIn"{
