@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 class RegisterScreen: UIViewController {
     @IBOutlet weak var emailRegister: UITextField!
@@ -26,11 +27,11 @@ class RegisterScreen: UIViewController {
    
         if emailRegister.text!.isEmpty == false &&
             passwordRegister.text!.isEmpty == false &&
-                passwordRegister.text == confirmPassword.text {
+            passwordRegister.text == confirmPassword.text {
                 userDatabase[emailRegister.text!] = passwordRegister.text!
                 okRegister = true
                 NSLog("\n Username: \(emailRegister.text!) \n Password; \(userDatabase[emailRegister.text!]!)")
-            performSegue(withIdentifier: "returnToLogIn", sender: nil)
+                self.dismiss(animated: true, completion: nil)
             }
             else{
                 registerStatus.textColor = .red

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 var userDatabase: [String:String] = [:]
 var inputUsername: String = ""

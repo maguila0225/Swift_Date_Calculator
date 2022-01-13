@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 let centuryDictonary: [Int:Int] = [0:2, 1:0, 2:5, 3:3]
 let dayDictionary: [Int:String] = [0:"Sunday", 1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday", 6:"Saturday", -6:"Monday", -5:"Tuesday", -4:"Wednesday", -3:"Thursday", -2:"Friday", -1:"Saturday"]

@@ -14,9 +14,11 @@
 		5BA7F5C62786DE1900C0CF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7F5C52786DE1900C0CF8C /* Assets.xcassets */; };
 		5BA7F5D3278709C600C0CF8C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F5D2278709C600C0CF8C /* RegisterScreen.swift */; };
 		5BA7F5D527871B9900C0CF8C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7F5D427871B9900C0CF8C /* MainScreen.swift */; };
+		E0A521C1F4D01A2E554947AF /* Pods_Swift_Date_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0773047D45C301C110ED804E /* Pods_Swift_Date_Calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0773047D45C301C110ED804E /* Pods_Swift_Date_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Date_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA7F5B92786DE1700C0CF8C /* Swift_Date_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Date_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA7F5BC2786DE1700C0CF8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BA7F5BE2786DE1700C0CF8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		5BA7F5CA2786DE1900C0CF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BA7F5D2278709C600C0CF8C /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		5BA7F5D427871B9900C0CF8C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		6E1309DF1B0484E27A58D49F /* Pods-Swift_Date_Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Date_Calculator.release.xcconfig"; path = "Target Support Files/Pods-Swift_Date_Calculator/Pods-Swift_Date_Calculator.release.xcconfig"; sourceTree = "<group>"; };
+		F174125918AA5B29C9F81BDE /* Pods-Swift_Date_Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Date_Calculator.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Date_Calculator/Pods-Swift_Date_Calculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A521C1F4D01A2E554947AF /* Pods_Swift_Date_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14BCCB6CADF876387A09A8F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F174125918AA5B29C9F81BDE /* Pods-Swift_Date_Calculator.debug.xcconfig */,
+				6E1309DF1B0484E27A58D49F /* Pods-Swift_Date_Calculator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5BA7F5B02786DE1700C0CF8C = {
 			isa = PBXGroup;
 			children = (
 				5BA7F5BB2786DE1700C0CF8C /* Swift_Date_Calculator */,
 				5BA7F5BA2786DE1700C0CF8C /* Products */,
+				14BCCB6CADF876387A09A8F3 /* Pods */,
+				FDC2A900C4A52EA17AAF109E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,14 @@
 			path = Swift_Date_Calculator;
 			sourceTree = "<group>";
 		};
+		FDC2A900C4A52EA17AAF109E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0773047D45C301C110ED804E /* Pods_Swift_Date_Calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BA7F5CD2786DE1900C0CF8C /* Build configuration list for PBXNativeTarget "Swift_Date_Calculator" */;
 			buildPhases = (
+				E4210AC7FA0FE1F648F7E9C3 /* [CP] Check Pods Manifest.lock */,
 				5BA7F5B52786DE1700C0CF8C /* Sources */,
 				5BA7F5B62786DE1700C0CF8C /* Frameworks */,
 				5BA7F5B72786DE1700C0CF8C /* Resources */,
+				4A55A246F1FC81C0D37A3A33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A55A246F1FC81C0D37A3A33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Date_Calculator/Pods-Swift_Date_Calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Date_Calculator/Pods-Swift_Date_Calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_Date_Calculator/Pods-Swift_Date_Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4210AC7FA0FE1F648F7E9C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift_Date_Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BA7F5B52786DE1700C0CF8C /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		5BA7F5CE2786DE1900C0CF8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F174125918AA5B29C9F81BDE /* Pods-Swift_Date_Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -308,6 +378,7 @@
 		};
 		5BA7F5CF2786DE1900C0CF8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1309DF1B0484E27A58D49F /* Pods-Swift_Date_Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
